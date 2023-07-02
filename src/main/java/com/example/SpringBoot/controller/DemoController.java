@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 
-@RestController
+@RestController                     //to make class controller class. i.e. it can take request from browser.
 public class DemoController {
 
     //EndPoint 1
-    @RequestMapping("/hello")
+    @RequestMapping("/hello")       // we use this on methods to create endpoint
     public void hello(){
         System.out.println("Hello from Spring Boot");
     }
@@ -32,3 +32,5 @@ public class DemoController {
         return name;
     }
 }
+
+//URl:   localhost:8081/hello

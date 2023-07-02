@@ -21,7 +21,7 @@ public class ListControllerCRUD {
 
     //read or get endpoint
     @RequestMapping("getlist")
-    public ArrayList<String >read(){
+    public ArrayList<String> read(){
         return courselist;
     }
 
@@ -30,6 +30,7 @@ public class ListControllerCRUD {
         courselist.set(index,element);
         return "Element Updated "+element;
     }
+
     @RequestMapping("/delete")
     public String delete(@RequestParam int index){
         courselist.remove(index);
