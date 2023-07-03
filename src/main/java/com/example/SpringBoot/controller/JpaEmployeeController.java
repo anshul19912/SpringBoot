@@ -1,5 +1,4 @@
 package com.example.SpringBoot.controller;
-
 import com.example.SpringBoot.model.Employee;
 import com.example.SpringBoot.repository.EmployeeJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +17,7 @@ public class JpaEmployeeController {
     @RequestMapping("/addemp")
     public String addemployee(@RequestBody Employee employee){
         employeeJpaRepository.save(employee);
-        return "Student added successfully";
+        return "Employee added successfully";
     }
 
     @RequestMapping("/viewemp")

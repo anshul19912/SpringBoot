@@ -5,18 +5,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity(name= "Student_Table")
+@Entity(name= "Student_Table")               // to make Modal class as table
 public class Student {
-    @Id
-    @GeneratedValue
+    @Id                                     // to set as primary key
+    @GeneratedValue                          // Automatic value increment
     Long id;
     @Column(name="Student_Name")
     String name;
     int age;
     String section;
 
-    public Student() {
-    }
+
 
     public Student(String name, int age, String section){
         this.name=name;
@@ -42,5 +41,8 @@ public class Student {
     }
     public void setSection(String section){
         this.section=section;
+    }
+
+    public Student() {                  // default constructor
     }
 }
